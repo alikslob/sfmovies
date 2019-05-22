@@ -17,7 +17,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start":"nodemon --ignore test/",
+    "start": "nodemon --ignore test/",
     "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && yarn version --new-version patch && git push origin && git push origin --tags",
     "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && yarn version --new-version minor && git push origin && git push origin --tags",
     "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && yarn version --new-version major && git push origin && git push origin --tags",
@@ -26,6 +26,9 @@
     "test:raw": "NODE_ENV=test mocha test --require test/setup.js --recursive --timeout 30000"
   },
   "dependencies": {
-    "hapi": "16.6.1"
+    "bookshelf": "^0.14.2",
+    "hapi": "16.6.1",
+    "knex": "^0.16.5",
+    "pg": "^7.11.0"
   }
 }
