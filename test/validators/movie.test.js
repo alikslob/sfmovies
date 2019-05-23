@@ -33,13 +33,8 @@ describe('movie validator', () => {
 
     it('is after 1878', () => {
       const payload = {
-<<<<<<< HEAD
         title: 'Lob Club',
         release_year: 1800
-=======
-        title:"Lob Club",
-        release_year:1800
->>>>>>> test(validators): added unit tesst for the movie validator
       };
       const result = Joi.validate(payload, MovieValidator);
 
@@ -49,13 +44,8 @@ describe('movie validator', () => {
 
     it('is limited to 4 digits', () => {
       const payload = {
-<<<<<<< HEAD
         title: 'Lobian Rhapsody',
         release_year: 18000
-=======
-        title:"Lobian Rhapsody",
-        release_year:18000
->>>>>>> test(validators): added unit tesst for the movie validator
       };
       const result = Joi.validate(payload, MovieValidator);
 
